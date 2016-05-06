@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/testacc/husky_robot/devel/setup.sh
