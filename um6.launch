@@ -40,14 +40,15 @@
     </rosparam>
   </node> -->
 
-  <node pkg="nodelet" type="nodelet" name="imu_filter" args="load imu_filter_madgwick/ImuFilterNodelet imu_manager">
+  <node pkg="nodelet" type="nodelet" name="imu_filter" args="load imu_filter_madgwick/ImuFilterNodelet imu_manager" output="screen">
+
     <rosparam file="$(env HUSKY_MAG_CONFIG)" />
     <rosparam>
       orientation_stddev: 0.001
       gain: 0.01
       zeta: 0.001
-      publish_tf: false
+      publish_tf: true
     </rosparam>
-  </node> -->
+  </node> 
 
 </launch>

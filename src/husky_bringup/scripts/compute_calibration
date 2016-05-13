@@ -19,11 +19,12 @@ except ImportError:
   exit(1)
 
 # Plots are optional
-try:
-  from matplotlib import pyplot
-  from mpl_toolkits.mplot3d import Axes3D
-except ImportError:
-  pyplot = None
+from matplotlib import pyplot
+from mpl_toolkits.mplot3d import Axes3D
+# except ImportError:
+#   print("************mpl_toolkits not imported*****************")
+#   exit(1)
+#   pyplot = None
 
 parser = ArgumentParser(description='Process bag file for compass calibration. Pass a bag containing /imu/mag topic, with the compass facing upright, being slowly rotated in a clockwise direction for 30-120 seconds.')
 parser.add_argument('bag', metavar='FILE', type=str, help='input bag file')
